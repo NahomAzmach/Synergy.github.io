@@ -1,0 +1,150 @@
+/* Colors */
+:root {
+    --primary-color: #667685;
+    --secondary-color: #228B22;
+    --accent-color: #DCDCDC;
+  }
+
+  body {
+    background: #f2f2f2;
+    font-family: 'Open Sans', sans-serif; 
+  }
+
+  /* Header */
+  header {
+    background-color: var(--primary-color);
+    background: linear-gradient(to right, #667685, #99c);
+    /* Rounded corners */
+    border-radius: 10px;
+
+    /* Shadow */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: background 0.3s;
+    text-align: center;
+    color: white;
+    padding: 1em;
+    border: 1px solid #aaa; 
+    
+  }
+  
+  header:hover {
+    background: linear-gradient(to right, #99c, #667685); 
+  }
+
+  header h1 {
+    margin: 0;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1em;
+    padding: 10px 15px;
+  }
+  
+  nav a:hover {
+    color: rgb(72, 72, 240);
+    text-decoration: underline dotted;
+  }
+
+  /* Home Page Styling */
+  #hero {
+      background:
+        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+          url('Synergy.png') no-repeat center center fixed;
+      background-size: cover;
+      background-attachment: fixed;
+
+      height: 100vh;
+      padding: 0;
+  }
+
+  #hero section {
+
+    top: 20px;
+    left: 20px;
+    width: 300px;
+    padding: 20px;
+    background: rgba(86, 111, 145, 0.8);
+    text-align: center; 
+  }
+
+  #hero h2, #hero p {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  #hero h2:nth-child(1) {
+    animation: fadeIn 0.5s 0.5s forwards;
+  }
+  
+  #hero p:nth-child(2) {
+    animation: fadeIn 0.5s 2s forwards; 
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Style business summary section */
+  #business-summary {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+
+  }
+  
+  .business {
+    width: 30%;
+    margin: 1%; 
+    text-align: center;
+    padding: 20px;
+    border: 1px solid rgb(121, 82, 82);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .business img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .business h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .business p {
+    font-size: 14px; 
+  }
+  .business1 {
+    background: #596a7a; 
+    margin: 1em;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  .hqlink {
+    font-size: 30px;
+  }
+
+  
+  .business2 {
+    background: #90220e;
+  }
+  
+  /* Business Page Styling */
+  #services, #contact {
+    margin: 2em 0;
+  }
