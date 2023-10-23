@@ -23,7 +23,7 @@
     transition: background 0.3s;
     text-align: center;
     color: white;
-    padding: 1em;
+    padding: 10px;
     border: 1px solid #aaa; 
     
   }
@@ -35,7 +35,7 @@
   header h1 {
     margin: 0;
     color: rgb(84, 41, 128);
-    font-size: 36px;
+    font-size: 24px;
     font-weight: bold;
     font-family: 'Courier New', monospace;
     padding: 10px;
@@ -44,15 +44,17 @@
   nav {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   nav a {
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 20px;
     transition: background 0.3s, color 0.3s;
     color: white;
     text-decoration: none;
-    margin-right: 1em;
+    margin: 0.5em 0; /* Add spacing between links */
     font-family: Copperplate, Papyrus, fantasy;
   }
   
@@ -89,6 +91,7 @@
     ), url('brian.jpeg');
     background-size: cover;
     background-position: center;
+    background-attachment: scroll;
     position: relative;
     padding: 20px;
     background-color: var(--secondary-color);
@@ -104,6 +107,7 @@
     }
   #hero h2 {
     font-size: 30px;
+    line-height: 1.4; /* Adjust line height */
     margin: 10px 0;
     color:#921f3c
   }
