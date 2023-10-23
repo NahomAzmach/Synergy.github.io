@@ -1,13 +1,14 @@
 /* Colors */
 :root {
     --primary-color: #667685;
-    --secondary-color: #228B22;
+    --secondary-color: #4245c2;
     --accent-color: #DCDCDC;
   }
 
   body {
     background: #f2f2f2;
     font-family: 'Open Sans', sans-serif; 
+    height: 100%;
   }
 
   /* Header */
@@ -33,9 +34,10 @@
 
   header h1 {
     margin: 0;
-    color: white;
+    color: rgb(84, 41, 128);
     font-size: 36px;
     font-weight: bold;
+    font-family: 'Courier New', monospace;
     padding: 10px;
   }
   
@@ -45,42 +47,80 @@
   }
 
   nav a {
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: background 0.3s, color 0.3s;
     color: white;
     text-decoration: none;
     margin-right: 1em;
-    padding: 10px 15px;
+    font-family: Copperplate, Papyrus, fantasy;
   }
   
   nav a:hover {
-    color: rgb(72, 72, 240);
+    background: var(--secondary-color);
+    color: #fff;
     text-decoration: underline dotted;
   }
 
-  /* Home Page Styling */
-  #hero {
-      background:
-        linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
-          url('Synergy.png') no-repeat center center fixed;
-      background-size: cover;
-      background-attachment: fixed;
 
-      height: 100vh;
-      padding: 0;
+   .parallax {
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+            url('Synergy.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: fixed;
+            
+            /* Set a specific height */
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 0;
+   }
+   @media only screen and (max-device-width: 1366px) {
+     .parallax {
+      background-attachment: scroll;
+    }
   }
 
   #hero section {
-
-    top: 20px;
-    left: 20px;
-    width: 300px;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ), url('brian.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
     padding: 20px;
-    background: rgba(86, 111, 145, 0.8);
-    text-align: center; 
+    background-color: var(--secondary-color);
+      font-family: 'Roboto', sans-serif;
+      font-weight: 900;
+      color: white;
+      text-transform: uppercase;
+      position: -ms-page;
+      top: 50%;
+      left: 50%;
+      font-size: 2rem;
+      transform: translate(-50%);
+    }
+  #hero h2 {
+    font-size: 30px;
+    margin: 10px 0;
+    color:#921f3c
+  }
+  
+  #hero p {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+  
+  img {
+    max-width: 100%;
   }
 
   #hero h2, #hero p {
     opacity: 0;
     transition: opacity 0.5s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   #hero h2:nth-child(1) {
@@ -98,6 +138,19 @@
   }
   
   /* Style business summary section */
+
+    /* Smartphones */
+   @media (max-width: 500px) {
+
+    #business-summaries {
+        flex-direction: column;
+    }
+
+    .business {
+        width: 100%;
+    }
+  
+  }
   #business-summary {
       display: flex;
       justify-content: center;
@@ -112,7 +165,14 @@
     padding: 20px;
     border: 1px solid rgb(121, 82, 82);
     box-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    background: #fff;
+    color: #333;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
+  .business:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
   
   .business img {
     width: 150px;
@@ -142,6 +202,12 @@
   
   .business2 {
     background: #90220e;
+  }
+  .Business3 {
+    background-image: url('ftf.png');
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
   }
   
   /* Business Page Styling */
